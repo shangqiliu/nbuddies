@@ -120,7 +120,7 @@ for n in range(args.N):
     #appends after each run so output is accurate even if stopped early
     rand_state = np.random.get_state()
     dataset["seeds"] = np.append(dataset["seeds"], {"algorithm" : rand_state[0], "keys" : rand_state[1], "pos" : rand_state[2], "has_gauss" : rand_state[3], "cached_gaussian" : rand_state[4]})
-    
+      
     if len(dataset["ICs"]) == 0:
         dataset["ICs"] = np.asarray([BHs])
     else:
